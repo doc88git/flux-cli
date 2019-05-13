@@ -1,6 +1,7 @@
 const program = require('commander');
 const showLogo = require('./functions/logo');
 const clone = require('./functions/clone');
+var appConfig = require('../package.json');
 // const path = require('path');
 
 const createProject = (name) => clone(name)
@@ -15,10 +16,10 @@ const createProject = (name) => clone(name)
   })
 
 const main = () => {
-  showLogo()
+  // showLogo()
 
   program
-    .version('1.0.0')
+    .version(appConfig.version)
     .option('-p, create [name]', 'Create a Widiget')
     .parse(process.argv);
 
