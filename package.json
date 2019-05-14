@@ -10,7 +10,8 @@
     "flux-cli": "bin/flux-cli"
   },
   "scripts": {
-    "go": "node src/index.js"
+    "go": "node src/index.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "chalk": "^2.4.2",
@@ -21,7 +22,16 @@
     "git-clone": "^0.1.0",
     "path": "^0.12.7"
   },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1"
+  },
   "keywords": [
+    "node",
     "cli",
     "flux-cli"
   ]
