@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-const require = require("esm")(module /*, options*/);
-require("../src/cli").cli(process.argv);
+const rq = require("esm")(module /*, options*/);
+rq("../src/cli").cli(process.argv);

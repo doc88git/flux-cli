@@ -1,16 +1,13 @@
 {
   "name": "@flux/flux-cli",
   "version": "0.0.1",
-  "main": "src/index.js",
   "author": "Gabriel Gelado",
   "license": "MIT",
-  "private": true,
+  "main": "src/index.js",
   "bin": {
-    "flux/flux-cli": "bin/flux-cli",
-    "flux-cli": "bin/flux-cli"
+    "flux": "bin/flux-cli"
   },
   "scripts": {
-    "go": "node src/index.js",
     "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
