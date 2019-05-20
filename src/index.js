@@ -1,25 +1,34 @@
 const program = require("commander");
-// const showLogo = require("./functions/logo");
+const showLogo = require("./functions/logo");
 const clone = require("./functions/clone");
+const finish = require("./functions/finish");
 var appConfig = require("../package.json");
-// const path = require('path');
+const chalk = require("chalk");
 
 const createProject = name =>
   clone(name)
+    .then((msg) => {
+      if (msg) console.log(chalk.white(msg));
+    })
     .then(() => {
-      setTimeout(() => {
-        process.stdout.write(`\r\n\r\nDone!`);
-      }, 1000);
+      finish.removeDotGit(name).catch(e => {
+        console.log(chalk.red(e));
+      })
+    })
+    .then(() => {
+      finish.runGitInit(name).catch(e => {
+        console.log(chalk.red(e));
+      })
     })
     .catch(e => {
-      console.log({ e });
+      console.log(chalk.red(e));
     })
     .finally(() => {
-      // console.log({ path: path.dirname(__dirname) })
+      console.log(chalk.green("Done!"));
     });
 
 const main = () => {
-  // showLogo()
+  showLogo()
 
   program
     .version(appConfig.version)

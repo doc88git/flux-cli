@@ -16,8 +16,10 @@
     "commander": "^2.20.0",
     "esm": "^3.2.22",
     "figlet": "^1.2.1",
+    "fs-extra": "^8.0.1",
     "git-clone": "^0.1.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
