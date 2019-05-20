@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "bin": {
-    "flux": "bin/flux-cli"
+    "flux": "bin/flux-cli.js"
   },
   "scripts": {
     "lint": "eslint --ignore-path .gitignore ."
