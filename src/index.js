@@ -39,4 +39,4 @@ const main = () => {
 };
 
 module.exports = main;
-main()
+// main()

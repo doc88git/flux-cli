@@ -1,6 +1,6 @@
 {
   "name": "@doc88/flux-cli",
-  "version": "0.0.0-alpha4",
+  "version": "0.0.0-alpha5",
   "author": "Gabriel Gelado",
   "license": "MIT",
   "main": "src/index.js",
