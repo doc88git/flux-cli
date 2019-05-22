@@ -3,7 +3,7 @@ const fs = require("fs");
 const chalk = require("chalk");
 const files = require("./files");
 
-const repo = "git@gitlab-cloud.doc88.com.br:flux/widgets/widget-core.git";
+const repo = "git@github.com:doc88git/flux-widget-base.git";
 
 module.exports = function(name) {
   return new Promise(function(resolve, reject) {
