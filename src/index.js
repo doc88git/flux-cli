@@ -9,16 +9,12 @@ const createProject = name =>
   clone(name)
     .then((msg) => {
       if (msg) console.log(chalk.white(msg));
-    })
-    .then(() => {
-      finish.removeDotGit(name).catch(e => {
-        console.log(chalk.red(e));
-      })
-    })
-    .then(() => {
-      finish.runGitInit(name).catch(e => {
-        console.log(chalk.red(e));
-      })
+
+      return Promise.all([
+        finish.removeDotGit(name),
+        finish.runGitInit(name),
+        finish.installDependences(name)
+      ])
     })
     .catch(e => {
       console.log(chalk.red(e));
@@ -32,10 +28,11 @@ const main = () => {
 
   program
     .version(appConfig.version)
-    .option("-p, create [name]", "Create a Widiget")
+    .option("-c, create [name]", "Create a Widiget")
     .parse(process.argv);
 
   if (program.create) return createProject(program.create);
 };
 
 module.exports = main;
+// main()
