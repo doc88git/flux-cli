@@ -26,13 +26,17 @@ const createProject = name =>
 const main = () => {
   showLogo()
 
+  const NO_COMMAND_SPECIFIED = (!program.args || program.args.length === 0);
+
   program
-    .version(appConfig.version)
+    .version(appConfig.version, '-v, --version')
     .option("-c, create [name]", "Create a Widiget")
     .parse(process.argv);
 
   if (program.create) return createProject(program.create);
+  if (NO_COMMAND_SPECIFIED) return program.outputHelp();
+
 };
 
 module.exports = main;
-// main()
+main()
