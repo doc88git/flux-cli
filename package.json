@@ -29,6 +29,10 @@
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.17.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doc88git/flux-cli.git"
+  },
   "keywords": [
     "node",
     "cli",
