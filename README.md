@@ -1,8 +1,11 @@
 # Flux CLI
 
 
-## Install
-```npm install -g git+ssh://git@gitlab-cloud.doc88.com.br:flux/widgets/flux-cli#master```
+## Install YARN
+```yarn add --global @doc88/flux-cli```
+
+## Install NPM
+```npm install -g @doc88/flux-cli```
 
 ## Create Widget
 ```flux create <your-widget>```
